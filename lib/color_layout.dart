@@ -7,7 +7,12 @@ class FirstRow extends StatelessWidget{
   Widget build(BuildContext context){
     return Row(
       children: [
-        Expanded(child: Container(color: Colors.blue, height: 100)),
+        Expanded(
+          child: AspectRatio(
+              aspectRatio: 1/1,
+              child: Container(color: Colors.blue)
+            )
+          ),
         Expanded(child: Container(color: Colors.yellow, height: 100)),
       ]
     );
