@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'color_layout.dart';
 
 const _CELL_PADDING = 10.0;
+const _THIRD_ROW_HEIGHT = 100.0;
 
 class _FirstRow extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
-      padding: EdgeInsets.only(top: _CELL_PADDING),
       color: Colors.red,
-      height: 100
+      height: 80
     );
   }
 }
@@ -47,18 +48,17 @@ class _SecondRow extends StatelessWidget{
 
 class _ThirdRow extends StatelessWidget{
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: _CELL_PADDING),
       child: Row(
         children: [
-          AspectRatio(aspectRatio: 1/1, child: Container(color: Colors.blue)),
-          AspectRatio(aspectRatio: 1/1, child: Container(color: Colors.red)),
-          AspectRatio(aspectRatio: 1/1, child: Container(color: Colors.yellow)),
-          AspectRatio(aspectRatio: 1/1, child: Container(color: Colors.green)),
-          AspectRatio(aspectRatio: 1/1, child: Container(color: Colors.pink)),
-        ]
-      )
+          Expanded(child: Container(color: Colors.blue[400], height: _THIRD_ROW_HEIGHT)),
+          Expanded(child: Container(color: Colors.green[400], height: _THIRD_ROW_HEIGHT)),
+          Expanded(child: Container(color: Colors.yellow[400], height: _THIRD_ROW_HEIGHT)),
+          Expanded(child: Container(color: Colors.pink[400], height: _THIRD_ROW_HEIGHT)),
+        ],
+      ),
     );
   }
 }
