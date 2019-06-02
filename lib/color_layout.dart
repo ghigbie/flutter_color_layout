@@ -13,7 +13,17 @@ class FirstRow extends StatelessWidget{
               child: Container(color: Colors.blue)
             )
           ),
-        Expanded(child: Container(color: Colors.yellow, height: 100)),
+        Expanded(
+          child: AspectRatio(
+              aspectRatio: 1/1,
+              child: Column(
+                children: [
+                  Container(color: Colors.purple, height: 50),
+                  Container(color: Colors.yellow, height: 50),
+                ]
+              )
+          )
+        )
       ]
     );
   }
@@ -41,8 +51,7 @@ class ColorLayout extends StatelessWidget{
         width: double.infinity,
         child: Column(
           children: [
-            Container(color: Colors.red, height: 50, padding: EdgeInsets.only(bottom: 10)),
-            Container(color: Colors.green, height: 40, padding: EdgeInsets.only(bottom: 10)),
+            Container(color: Colors.red, height: 100, padding: EdgeInsets.only(bottom: 10)),
             FirstRow(),
             SecondRow(),
           ]
