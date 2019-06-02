@@ -66,7 +66,7 @@ class _ThirdRow extends StatelessWidget{
 
 class _AdjustableBlock extends StatelessWidget{
   final double widthFactor;
-  _AdjustableBlock(this.widthFactor){}
+  _AdjustableBlock(this.widthFactor);
 
   @override
   Widget build(BuildContext context) {
