@@ -75,7 +75,10 @@ class _AdjustableBlock extends StatelessWidget{
       child: Row(
         children: [
           Expanded(
-            child: Container(color: Colors.red, height: _SMALL_CELLS_HEIGHT,)
+            child: FractionallySizedBox(
+              alignment: Alignment.centerLeft,
+              widthFactor: widthFactor, 
+              child: Container(color: Colors.red, height: _SMALL_CELLS_HEIGHT,))
           )
         ]
       )
@@ -97,6 +100,8 @@ class ColorLayout extends StatelessWidget{
             _SecondRow(),
             _ThirdRow(),
             _AdjustableBlock(1.0),
+            _AdjustableBlock(0.75),
+            _AdjustableBlock(0.5),
           ]
             ),
         ),
