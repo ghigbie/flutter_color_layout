@@ -2,34 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'color_layout.dart';
 
-class FirstRow extends StatelessWidget{
+class _FirstRow extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return Row(
-      children: [
-        Expanded(
-          child: AspectRatio(
-              aspectRatio: 1/1,
-              child: Container(color: Colors.blue)
-            )
-          ),
-        Expanded(
-          child: AspectRatio(
-              aspectRatio: 1/1,
-              child: Column(
-                children: [
-                  Container(color: Colors.purple, height: 50),
-                  Container(color: Colors.yellow, height: 50),
-                ]
+    return Container(
+      padding: EdgeInsets.only(top: 10),
+        child:  Row(
+        children: [
+          Expanded(
+            child: AspectRatio(
+                aspectRatio: 1/1,
+                child: Container(color: Colors.blue)
               )
+            ),
+          Expanded(
+            child: AspectRatio(
+                aspectRatio: 1/1,
+                child: Column(
+                  children: [
+                    Expanded(child: Container(color: Colors.purple)),
+                    Expanded(child: Container(color: Colors.yellow)),
+                  ]
+                )
+            )
           )
-        )
-      ]
+        ]
+      )
     );
   }
 }
 
-class SecondRow extends StatelessWidget{
+class _SecondRow extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Row(
@@ -52,8 +55,8 @@ class ColorLayout extends StatelessWidget{
         child: Column(
           children: [
             Container(color: Colors.red, height: 100, padding: EdgeInsets.only(bottom: 10)),
-            FirstRow(),
-            SecondRow(),
+            _FirstRow(),
+            _SecondRow(),
           ]
             ),
         ),
