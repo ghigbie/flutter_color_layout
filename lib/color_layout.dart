@@ -5,6 +5,7 @@ import 'color_layout.dart';
 
 const _CELL_PADDING = 10.0;
 const _THIRD_ROW_HEIGHT = 100.0;
+const _SMALL_CELLS_HEIGHT = 20.0;
 
 class _FirstRow extends StatelessWidget{
   @override
@@ -77,6 +78,11 @@ class ColorLayout extends StatelessWidget{
             _FirstRow(),
             _SecondRow(),
             _ThirdRow(),
+            Container(
+              padding: EdgeInsets.only(top: _CELL_PADDING),
+              color: Colors.red,
+              height: _SMALL_CELLS_HEIGHT,
+            )
           ]
             ),
         ),
