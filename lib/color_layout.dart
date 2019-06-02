@@ -79,9 +79,12 @@ class ColorLayout extends StatelessWidget{
             _SecondRow(),
             _ThirdRow(),
             Container(
-              padding: EdgeInsets.only(top: _CELL_PADDING),
-              color: Colors.red,
+              color: Colors.red[400],
               height: _SMALL_CELLS_HEIGHT,
+            ),
+            FractionallySizedBox(
+              widthFactor: 0.75,
+              child: Container(color: Colors.red[400], height: _SMALL_CELLS_HEIGHT),
             )
           ]
             ),
