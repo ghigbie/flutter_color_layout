@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'color_layout.dart';
 
+var padding = 10.0;
+
 class _FirstRow extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
-      padding: EdgeInsets.only(top: 10),
+      padding: EdgeInsets.only(top: padding),
         child:  Row(
         children: [
           Expanded(
@@ -15,6 +17,7 @@ class _FirstRow extends StatelessWidget{
                 child: Container(color: Colors.blue)
               )
             ),
+          Container(width: padding),  
           Expanded(
             child: AspectRatio(
                 aspectRatio: 1/1,
@@ -35,10 +38,17 @@ class _FirstRow extends StatelessWidget{
 class _SecondRow extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return Row(
-      children: [
-        Container(color: Colors.pink, height: 100, width: 100)
-      ]
+    return Container(
+      padding: EdgeInsets.only(top: padding),
+      child: Row(
+        children: [
+          AspectRatio(aspectRatio: 1/1, child: Container(color: Colors.blue)),
+          AspectRatio(aspectRatio: 1/1, child: Container(color: Colors.red)),
+          AspectRatio(aspectRatio: 1/1, child: Container(color: Colors.yellow)),
+          AspectRatio(aspectRatio: 1/1, child: Container(color: Colors.green)),
+          AspectRatio(aspectRatio: 1/1, child: Container(color: Colors.pink)),
+        ]
+      )
     );
   }
 }
