@@ -7,7 +7,8 @@ class FirstRow extends StatelessWidget{
   Widget build(BuildContext context){
     return Row(
       children: [
-        Container(color: Colors.blue, height: 100, width: 100)
+        Expanded(child: Container(color: Colors.blue, height: 100)),
+        Expanded(child: Container(color: Colors.yellow, height: 100)),
       ]
     );
   }
@@ -37,7 +38,8 @@ class ColorLayout extends StatelessWidget{
           children: [
             Container(color: Colors.red, height: 50, padding: EdgeInsets.only(bottom: 10)),
             Container(color: Colors.green, height: 40, padding: EdgeInsets.only(bottom: 10)),
-            FirstRow()
+            FirstRow(),
+            SecondRow(),
           ]
             ),
         ),
