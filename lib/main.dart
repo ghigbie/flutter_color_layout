@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'color_layout.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Color Layouts')
         ),
-        body: Center(child: Text('Temporary'),),
+        body: ColorLayout(),
       )
     );
   }
